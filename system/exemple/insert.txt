@@ -1,0 +1,12 @@
+             $SqlData = array();
+                $SqlData[':TOKEN'] = $this->GenerateToken();
+                $SqlData[':TYPE'] = $param['TYPE'];
+                $SqlData[':ICON'] = $param['ICON'];
+                $SqlData[':CONTENT'] = $param['CONTENT'];
+                $SqlData[':OPENSTATE'] = "0";
+                $SqlData[':DATE'] = date("d/m/Y");
+
+                $iDATA = $this->db->prepare("INSERT INTO `$this->table` VALUES(NULL,:TOKEN,:TYPE,:ICON,:CONTENT,:OPENSTATE,:DATE)");
+                $iDATA->execute($SqlData);
+            
+                $return['success'][] = "success_lib_anotif_add";

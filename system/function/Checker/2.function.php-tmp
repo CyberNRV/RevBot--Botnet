@@ -1,0 +1,13 @@
+<?php
+function Checker2($table, $colonne, $colonne2, $find, $find2) {
+	global $db;
+	$SqlCounter = $db->prepare("SELECT COUNT(*) FROM `$table` WHERE `$colonne` = :find AND `$colonne2` = :find2");
+	$SqlCounter->execute(array(':find' => $find, ':find2' => $find2));
+	$COUNT = $SqlCounter->fetchColumn(0);
+	if (0 == $COUNT) {
+		return FALSE;
+	} else {
+		return TRUE;
+	}
+}
+?>

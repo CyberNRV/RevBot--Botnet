@@ -1,0 +1,11 @@
+{
+    "task": "task",
+    "API_KEY": "TESTAPIKEY",
+    "HWID": "XXX",
+    "USER_TOKEN": "XXX",
+    "GROUP_TOKEN": "XXXX",
+    "PCNAME": "XXX-XX",
+    "USERNAME": "XXX",
+    "BUSY": "1",
+    "ANTI_VIRUS": "No Antivirus Found"
+}
