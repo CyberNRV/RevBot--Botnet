@@ -1,4 +1,5 @@
 <?php
+    //POWER BY CYBERNRV
     session_start();
     require_once "./system/config/init.php";
 
